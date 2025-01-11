@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nationality Mapping</title>
+  <link rel="stylesheet" href="./styles.css"> <!-- Link to CSS file -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <h1>Maldives Greentax Data</h1>
+    <div class="controls">
+      <label for="fileInput" class="file-upload-label">Upload File</label>
+      <input type="file" id="fileInput" accept=".txt" />
+      <div id="drop-zone">Drag and Drop Your File Here</div>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="row-count" id="rowCount">Total Rows: 0</div>
+    <input type="text" id="searchBar" placeholder="Search..." />
+    <button id="searchButton">Search</button>
+    <input type="text" id="regNumbersInput" placeholder="Enter starting Reg Number (e.g., 201)" />
+    <button id="generateRegButton">Generate Reg Numbers</button>
+    <button id="exportCsvButton">Export to CSV</button>
+  </div>
+
+  <!-- Separate container for the table -->
+  <div class="table-scroll-container">
+    <div class="table-container">
+      <table id="dataTable">
+        <thead id="tableHeader"></thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="./script.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
